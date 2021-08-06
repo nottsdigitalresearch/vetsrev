@@ -1,0 +1,153 @@
+/* my styles */
+body          {font-family: 'Roboto', sans-serif;}
+.header       {margin-bottom: 1em; }
+.footer       {background: #efefef; padding: 20px;  margin: 2em 0; border-top: 1px solid #434341;}
+
+.header img   {max-width: 100%}
+.title        {padding-top: 10px}
+.title h1     {font-size: 50px; font-weight: 100; letter-spacing: 2px; margin-bottom: 0; }
+.title p      {font-size: 18px; font-weight: 300; margin-bottom: 0}
+
+.navbar       {margin-bottom: 1.5em;}
+.bg-light     {background-color: #EFEFEF!important;}
+.navbar-expand-lg .navbar-nav .nav-link {padding-right: 1.5rem; }
+.navbar-light .navbar-nav .nav-link     {color: #1a296b}
+.navbar-light .navbar-nav .nav-link:hover {color: #1a296b; text-decoration: underline}
+
+.footer h3      {font-size: 40px; font-weight: 200; margin: 0}
+.footer .strap  {font-weight: 300;}
+.smallprint     {text-align: right; font-size: 80%; font-style: italic;}
+.smallprint a   {color: inherit;}
+
+/* bibliography */
+.form-inline ::placeholder   {font-style: italic;}
+.form-inline                 {justify-content: flex-end;}
+.form-inline                 {margin-bottom: 1em}
+.form-inline .form-control   {width: 40%}
+.form-inline span            {margin-left: 1.5em; font-weight: bold; margin-right: 5px}
+
+.bibliography                {list-style: none; padding-left: 0}
+.bibliography li             {margin-left: 1em; text-indent: -1em; padding-bottom: 0.85rem; position: relative}
+.bibliography                {padding-top: 1rem}
+.bibliography a              {color: black}
+.bibliography li b           {display: none; /* hides keywords but can still filter on */}
+.details i                   {display: none; /* hides link text */}
+/* expand link to whole parent LI */
+.details::before  {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.bibliography li:hover      {text-decoration: underline;}
+
+.pagination li              { display:inline-block; padding:5px 10px; border: 1px solid #ccc}
+.pagination .active         {background: #eee}
+.pagination .disabled a      {color: #ccc}
+.pagination .disabled a:hover {text-decoration: none; cursor: default}
+
+
+/* publication */
+.publication h1    {font-size: 2rem; font-weight: 300; margin-bottom: 1rem}
+.publication h2    {font-size: 1.5rem; font-weight: 300}
+.citation b        {display: none; /* hides keywords (required for filters) */}
+
+
+
+/* cookie alert */
+.cookiealert {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 !important;
+    z-index: 999;
+    visibility: hidden;
+    border-radius: 0;
+    transform: translateY(100%);
+    transition: all 500ms ease-out;
+}
+
+.cookiealert.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0%);
+    transition-delay: 1000ms;
+}
+
+.cookiealert a {
+    text-decoration: underline;
+    color: inherit;
+}
+
+.cookiealert button {
+    margin-left: 15px;
+    vertical-align: baseline;
+}
+
+
+
+/* MEDIUM DEVICES */
+@media (min-width:  768px) {
+  .header       {margin-bottom: 1.5em; height: 72px; }
+  .header img   {float: left;  margin-right: 3em; max-width: 50%}
+  .title        {padding-top: 12px}
+  .title h1     {font-size: 45px; line-height: 42px; font-weight: 100; letter-spacing: 2px; margin-bottom: 0; }
+  .title p      {font-size: 14px; font-weight: 300; margin-bottom: 0}
+
+  .navbar       {margin-bottom: 1.5em;}
+
+  .bibliography li             {margin-left: 3em; text-indent: -3em; padding-bottom: 0.85rem; position: relative}
+}
+
+/* LARGE DEVICES */
+@media (min-width:  992px) {
+  .header       {height: 90px; }
+  .header img   {margin-right: 4em; max-width: 100%}
+  .title        {padding-top: 15px}
+  .title h1     {font-size: 60px; line-height: 50px;}
+  .title p      {font-size: 18px;}
+
+  .form-inline .form-control   {width: 300px}
+}
+
+
+/*
+ * Font Awesome Free 5.8.1 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ Need to include /vendor/fontawesome-5.8.1.min.css too
+ */
+@font-face {
+ font-family: 'Font Awesome 5 Free';
+ font-style: normal;
+ font-weight: 400;
+ font-display: auto;
+ src: url("../vendor/fa-regular-400.eot");
+ src: url("../vendor/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../vendor/fa-regular-400.woff2") format("woff2"), url("../vendor/fa-regular-400.woff") format("woff"), url("../vendor/fa-regular-400.ttf") format("truetype"), url("../vendor/fa-regular-400.svg#fontawesome") format("svg"); }
+.far {
+ font-family: 'Font Awesome 5 Free';
+ font-weight: 400; }
+
+@font-face {
+ font-family: 'Font Awesome 5 Free';
+ font-style: normal;
+ font-weight: 900;
+ font-display: auto;
+ src: url("../vendor/fa-solid-900.eot");
+ src: url("../vendor/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../vendor/fa-solid-900.woff2") format("woff2"), url("../vendor/fa-solid-900.woff") format("woff"), url("../vendor/fa-solid-900.ttf") format("truetype"), url("../vendor/fa-solid-900.svg#fontawesome") format("svg"); }
+.fa,
+.fas {
+ font-family: 'Font Awesome 5 Free';
+ font-weight: 900; }
+
+@font-face {
+ font-family: 'Font Awesome 5 Brands';
+ font-style: normal;
+ font-weight: normal;
+ font-display: auto;
+ src: url("../vendor/fa-brands-400.eot");
+ src: url("../vendor/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../vendor/fa-brands-400.woff2") format("woff2"), url("../vendor/fa-brands-400.woff") format("woff"), url("../vendor/fa-brands-400.ttf") format("truetype"), url("../vendor/fa-brands-400.svg#fontawesome") format("svg"); }
+.fab {
+ font-family: 'Font Awesome 5 Brands'; }
