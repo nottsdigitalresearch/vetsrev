@@ -2311,24 +2311,28 @@
   <script src="/vendor/popper.min.js "></script>
   <script src="/vendor/bootstrap-4.3.1.min.js "></script>
 
-  
 
 
-  
+
+
   <script src="/vendor/list.min.js"></script>
   <script>
   $(document).ready(function(){
+    // open links in new window so can get back to filtered list
+    $(".details").attr('target','_blank');
+
     // filter and paginate using https://listjs.com/
     // lists.js wants to identify items by class so add one
-    $(".bibliography li span").addClass("citation")
+    $(".bibliography li span").addClass("citation");
 
     var options = {
       valueNames: [ 'citation' ],
       listClass: "bibliography",
       page: 10,
-      pagination: true,
-      innerWindow: 1,
-      outerWindow: 1
+      pagination: [{
+              innerWindow: 2,
+              outerWindow: 1
+            }]
     }
     var citationsList = new List('bibliographyBlock', options);
 
@@ -2343,7 +2347,7 @@
 
   });
   </script>
-  
+
 
 
   <!-- cookies and Google Analytics-->
